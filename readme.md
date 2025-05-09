@@ -43,9 +43,9 @@ Having experience with Django and with using Swagger I decided to implement it i
 
 ## Database & Schema
 
-#### The files for the database are stored in the /prisma/ folder as follows:
+#### The files for the database are stored in the `prisma/` folder as follows:
 
-- **Database location:** `prisma/dev.db` (auto-created by Prisma)
+- **Database location:** `prisma/dev.db` and is auto-created by Prisma.
 - **Schema definition:** `prisma/schema.prisma`
 - **Migration script:**  
   `prisma/migrations/<timestamp>_init/migration.sql`
