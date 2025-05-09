@@ -17,7 +17,7 @@ Having experience with Django and with using Swagger I decided to implement it i
 - **Zod (schema validation)**
 - **Swagger (API documentation)**
 
-### Setup Instructions
+## Setup Instructions
 
 1. Install dependencies:
    ```bash
