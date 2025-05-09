@@ -55,6 +55,17 @@ Content-Type: application/json
   "durationMins": 60
 }
 
+POST http://localhost:3000/api/appointments
+Content-Type: application/json
+
+{
+  "carId": 3,
+  "contactMethod": "email",
+  "action": "Brake pad replacement",
+  "date": "2025-05-09T09:00:00Z",
+  "durationMins": 30
+}
+
 POST http://localhost:3000/api/serviceHistory
 Content-Type: application/json
 {

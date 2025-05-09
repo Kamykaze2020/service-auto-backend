@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev src/index.ts",
     "start:dev": "tsc -w",
-    "prisma": "prisma"
+    "prisma": "prisma",
+    "seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
