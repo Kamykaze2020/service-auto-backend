@@ -11,11 +11,13 @@ const router = (0, express_1.Router)();
  * /api/cars:
  *   get:
  *     summary: Get all cars
+ *     tags: [Cars]
  *     responses:
  *       200:
  *         description: List of cars
  *   post:
  *     summary: Add a new car
+ *     tags: [Cars]
  *     requestBody:
  *       required: true
  *       content:
@@ -49,6 +51,7 @@ const router = (0, express_1.Router)();
  * /api/cars/{id}:
  *   get:
  *     summary: Get car by ID
+ *     tags: [Cars]
  *     parameters:
  *       - in: path
  *         name: id
@@ -62,6 +65,7 @@ const router = (0, express_1.Router)();
  *         description: Car not found
  *   put:
  *     summary: Update car by ID
+ *     tags: [Cars]
  *     parameters:
  *       - in: path
  *         name: id
@@ -79,6 +83,7 @@ const router = (0, express_1.Router)();
  *         description: Car updated
  *   delete:
  *     summary: Delete car by ID
+ *     tags: [Cars]
  *     parameters:
  *       - in: path
  *         name: id

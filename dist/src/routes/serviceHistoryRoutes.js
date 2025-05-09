@@ -10,11 +10,13 @@ const router = (0, express_1.Router)();
  * /api/history:
  *   get:
  *     summary: Get all service history records
+ *     tags: [History]
  *     responses:
  *       200:
  *         description: List of service history entries
  *   post:
  *     summary: Create a service history record
+ *     tags: [History]
  *     requestBody:
  *       required: true
  *       content:

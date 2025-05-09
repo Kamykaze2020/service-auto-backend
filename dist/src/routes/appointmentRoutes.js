@@ -10,11 +10,13 @@ const router = (0, express_1.Router)();
  * /api/appointments:
  *   get:
  *     summary: Get all appointments
+ *     tags: [Appointments]
  *     responses:
  *       200:
  *         description: List of appointments
  *   post:
  *     summary: Create a new appointment
+ *     tags: [Appointments]
  *     requestBody:
  *       required: true
  *       content:

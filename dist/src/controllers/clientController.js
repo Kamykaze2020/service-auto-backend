@@ -9,13 +9,26 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createClient = exports.getClients = void 0;
+exports.deactivateClient = exports.updateClient = exports.createClient = exports.getClientById = exports.getClients = void 0;
 const prisma_1 = require("../prisma");
 const getClients = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const clients = yield prisma_1.prisma.client.findMany({ include: { cars: true } });
     res.json(clients);
 });
 exports.getClients = getClients;
+const getClientById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = parseInt(req.params.id);
+    const client = yield prisma_1.prisma.client.findUnique({
+        where: { id },
+        include: { cars: true },
+    });
+    if (!client) {
+        res.status(404).json({ error: "Client not found" });
+        return;
+    }
+    res.json(client);
+});
+exports.getClientById = getClientById;
 const createClient = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { firstName, lastName, phone, email } = req.body;
     const client = yield prisma_1.prisma.client.create({
@@ -24,3 +37,31 @@ const createClient = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     res.status(201).json(client);
 });
 exports.createClient = createClient;
+const updateClient = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = parseInt(req.params.id);
+    try {
+        const updated = yield prisma_1.prisma.client.update({
+            where: { id },
+            data: req.body,
+        });
+        res.json(updated);
+    }
+    catch (error) {
+        res.status(404).json({ error: "Client not found or invalid data" });
+    }
+});
+exports.updateClient = updateClient;
+const deactivateClient = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = parseInt(req.params.id);
+    try {
+        const client = yield prisma_1.prisma.client.update({
+            where: { id },
+            data: { active: false },
+        });
+        res.json({ message: "Client deactivated", client });
+    }
+    catch (error) {
+        res.status(404).json({ error: "Client not found" });
+    }
+});
+exports.deactivateClient = deactivateClient;
