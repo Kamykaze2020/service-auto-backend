@@ -38,7 +38,7 @@ Having experience with Django and with using Swagger I decided to implement it i
 
 - **Base URL:** [http://localhost:3000](http://localhost:3000)
 - **Swagger UI:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs)  
-  ↳ *Swagger is generated using JSDoc comments and `swagger-jsdoc`*
+  - *Swagger is generated using JSDoc comments and `swagger-jsdoc`*
 
 
 ## Database & Schema
