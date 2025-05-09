@@ -16,3 +16,19 @@ Having experience with Django and with using Swagger I decided to implement it i
 - **SQLite (local database)**
 - **Zod (schema validation)**
 - **Swagger (API documentation)**
+
+### 🛠️ Setup Instructions
+
+1. Install dependencies:
+   ```bash
+   npm install
+
+Create the SQLite database and tables:
+
+npx prisma migrate dev --name init
+
+Seed test data:
+npm run seed
+
+Start the server:
+npm start
