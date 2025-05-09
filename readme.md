@@ -22,7 +22,7 @@ Having experience with Django and with using Swagger I decided to implement it i
 1. Install dependencies:
    ```bash
    npm install
-2. Create the SQLite database and tables::
+2. Create the SQLite database and tables:
    ```bash
    npx prisma migrate dev --name init
 3. Seed test data:
@@ -31,6 +31,14 @@ Having experience with Django and with using Swagger I decided to implement it i
 4. Start the server:
    ```bash
    npm start
+
+Server will run at:
+-> http://localhost:3000 <-
+
+Interactive Swagger UI available at:
+-> http://localhost:3000/api-docs <-
+
+Swagger is generated using JSDoc comments + swagger-jsdoc.
 
 Database is located at: prisma/dev.db and is auto-created by Prisma.
 
