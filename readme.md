@@ -34,5 +34,14 @@ Having experience with Django and with using Swagger I decided to implement it i
 
 Database is located at: prisma/dev.db and is auto-created by Prisma.
 
+The SQL migration is stored in:
+prisma/migrations/<timestamp>_init/migration.sql
+
+The schema definition is in:
+prisma/schema.prisma
+
+To populate with data use:
+prisma/seed.ts
+
 
 
