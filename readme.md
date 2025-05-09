@@ -58,6 +58,15 @@ Having experience with Django and with using Swagger I decided to implement it i
 * You can run tests directly in `test.http` using the [HttpYac extension](https://marketplace.visualstudio.com/items?itemName=anweber.vscode-httpyac) for VS Code.
 
 
+## Dependencies installed
+npm install prisma --save-dev
+npm install lowdb
+npm install express @prisma/client
+npm install -D typescript ts-node-dev prisma @types/express @types/node
+npm install -D ts-node
+npm install swagger-ui-express swagger-jsdoc
+
+
 ## Contact
 
 For any questions or feedback, feel free to contact me:
