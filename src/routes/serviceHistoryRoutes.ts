@@ -4,9 +4,12 @@ import {
   createHistory,
 } from "../controllers/serviceHistoryController";
 
+import { validate } from "../middleware/validate";
+import { serviceHistorySchema } from "../schemas/serviceHistorySchema";
+
 const router = Router();
 
 router.get("/", getHistories);
-router.post("/", createHistory);
+router.post("/", validate(serviceHistorySchema), createHistory);
 
 export default router;

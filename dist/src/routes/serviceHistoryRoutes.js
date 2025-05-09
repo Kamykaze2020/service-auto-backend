@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const serviceHistoryController_1 = require("../controllers/serviceHistoryController");
+const validate_1 = require("../middleware/validate");
+const serviceHistorySchema_1 = require("../schemas/serviceHistorySchema");
 const router = (0, express_1.Router)();
 router.get("/", serviceHistoryController_1.getHistories);
-router.post("/", serviceHistoryController_1.createHistory);
+router.post("/", (0, validate_1.validate)(serviceHistorySchema_1.serviceHistorySchema), serviceHistoryController_1.createHistory);
 exports.default = router;
