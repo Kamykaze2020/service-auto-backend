@@ -9,6 +9,40 @@ import { serviceHistorySchema } from "../schemas/serviceHistorySchema";
 
 const router = Router();
 
+/**
+ * @swagger
+ * /api/history:
+ *   get:
+ *     summary: Get all service history records
+ *     responses:
+ *       200:
+ *         description: List of service history entries
+ *   post:
+ *     summary: Create a service history record
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [appointmentId, problemsReported, workDone, replacedParts, durationMins]
+ *             properties:
+ *               appointmentId:
+ *                 type: integer
+ *               problemsReported:
+ *                 type: string
+ *               workDone:
+ *                 type: string
+ *               replacedParts:
+ *                 type: string
+ *               durationMins:
+ *                 type: integer
+ *                 multipleOf: 10
+ *     responses:
+ *       201:
+ *         description: Service history created
+ */
+
 router.get("/", getHistories);
 router.post("/", validate(serviceHistorySchema), createHistory);
 
