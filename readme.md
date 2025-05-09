@@ -60,10 +60,15 @@ Having experience with Django and with using Swagger I decided to implement it i
 
 ## Dependencies installed
 npm install prisma --save-dev
+
 npm install lowdb
+
 npm install express @prisma/client
+
 npm install -D typescript ts-node-dev prisma @types/express @types/node
+
 npm install -D ts-node
+
 npm install swagger-ui-express swagger-jsdoc
 
 
