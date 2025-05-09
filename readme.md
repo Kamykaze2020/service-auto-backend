@@ -50,7 +50,6 @@ Having experience with Django and with using Swagger I decided to implement it i
   ↳ Run with:
   ```bash
   npm run seed
-````
 
 ## 🧪 API Testing
 
