@@ -50,9 +50,7 @@ Having experience with Django and with using Swagger I decided to implement it i
 - **Migration script:**  
   `prisma/migrations/<timestamp>_init/migration.sql`
 - **Seed data script:** `prisma/seed.ts`  
-  ↳ Run with:
-  ```bash
-  npm run seed
+
 
 ## API Testing
 
