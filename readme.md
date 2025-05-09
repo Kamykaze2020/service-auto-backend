@@ -50,15 +50,15 @@ Having experience with Django and with using Swagger I decided to implement it i
   ```bash
   npm run seed
 
-## 🧪 API Testing
+## API Testing
 
 * HTTP tests are written using **HttpYac** instead of Postman.
 * You can run tests directly in `test.http` using the [HttpYac extension](https://marketplace.visualstudio.com/items?itemName=anweber.vscode-httpyac) for VS Code.
 
 
-## 📬 Contact
+## Contact
 
 For any questions or feedback, feel free to contact me:
-📧 **[vasileandrei.popa@gmail.com](mailto:vasileandrei.popa@gmail.com)**
+**[vasileandrei.popa@gmail.com](mailto:vasileandrei.popa@gmail.com)**
 
 
