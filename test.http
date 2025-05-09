@@ -14,8 +14,8 @@ Content-Type: application/json
 {
   "licensePlate": "AB123CD",
   "vin": "1HGCM82633A123456",
-  "make": "Toyota",
-  "model": "Corolla",
+  "make": "Dacia",
+  "model": "Logan",
   "year": 2020,
   "engineType": "benzina",
   "engineSize": 1.8,
@@ -25,6 +25,25 @@ Content-Type: application/json
 }
 
 GET http://localhost:3000/api/cars
+
+PUT http://localhost:3000/api/cars/1
+Content-Type: application/json
+{
+  "licensePlate": "AB123CD",
+  "vin": "1HGCM82633A123456",
+  "make": "Toyota34",
+  "model": "Corolla3",
+  "year": 2020,
+  "engineType": "benzina",
+  "engineSize": 1.8,
+  "horsepower": 140,
+  "kilowatts": 103.0,
+  "clientId": 1
+}
+
+GET http://localhost:3000/api/cars/1
+
+DELETE http://localhost:3000/api/cars/2
 
 POST http://localhost:3000/api/appointments
 Content-Type: application/json

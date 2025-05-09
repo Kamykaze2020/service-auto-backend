@@ -2,9 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const carController_1 = require("../controllers/carController");
+const validate_1 = require("../middleware/validate");
+const carSchema_1 = require("../schemas/carSchema");
 const router = (0, express_1.Router)();
 router.get("/", carController_1.getCars);
-router.post("/", carController_1.createCar);
+router.post("/", (0, validate_1.validate)(carSchema_1.carSchema), carController_1.createCar);
 router.get("/:id", carController_1.getCarById);
 router.put("/:id", carController_1.updateCar);
 router.delete("/:id", carController_1.deactivateCar);
