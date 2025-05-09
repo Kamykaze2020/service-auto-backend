@@ -3,9 +3,9 @@ GET http://localhost:3000/api/clients
 POST http://localhost:3000/api/clients
 Content-Type: application/json
 {
-  "firstName": "Vasile-Andrei",
+  "firstName": "Vasile-Andrei2",
   "lastName": "Popa",
-  "phone": "077777777",
+  "phone": "0712345678",
   "email": "popa@email.com"
 }
 

@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const clientController_1 = require("../controllers/clientController");
+const validate_1 = require("../middleware/validate");
+const clientSchema_1 = require("../schemas/clientSchema");
 const router = (0, express_1.Router)();
 router.get("/", clientController_1.getClients);
-router.post("/", clientController_1.createClient);
+router.post("/", (0, validate_1.validate)(clientSchema_1.clientSchema), clientController_1.createClient);
 exports.default = router;
