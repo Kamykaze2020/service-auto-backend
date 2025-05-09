@@ -32,15 +32,14 @@ Having experience with Django and with using Swagger I decided to implement it i
    ```bash
    npm start
 
-## 🌐 Server & API Access
+## Server & API Access
 
 - **Base URL:** [http://localhost:3000](http://localhost:3000)
 - **Swagger UI:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs)  
   ↳ *Swagger is generated using JSDoc comments and `swagger-jsdoc`*
 
----
 
-## 🗂️ Database & Schema
+## Database & Schema
 
 - **Database location:** `prisma/dev.db` (auto-created by Prisma)
 - **Schema definition:** `prisma/schema.prisma`
@@ -56,7 +55,6 @@ Having experience with Django and with using Swagger I decided to implement it i
 * HTTP tests are written using **HttpYac** instead of Postman.
 * You can run tests directly in `test.http` using the [HttpYac extension](https://marketplace.visualstudio.com/items?itemName=anweber.vscode-httpyac) for VS Code.
 
----
 
 ## 📬 Contact
 
