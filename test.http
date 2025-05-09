@@ -1,0 +1,10 @@
+GET http://localhost:3000/api/clients
+
+POST http://localhost:3000/api/clients
+Content-Type: application/json
+{
+  "firstName": "Vasile-Andrei",
+  "lastName": "Popa",
+  "phone": "077777777",
+  "email": "popa@email.com"
+}
