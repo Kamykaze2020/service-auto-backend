@@ -32,24 +32,36 @@ Having experience with Django and with using Swagger I decided to implement it i
    ```bash
    npm start
 
-Server will run at:
--> http://localhost:3000 <-
+## 🌐 Server & API Access
 
-Interactive Swagger UI available at:
--> http://localhost:3000/api-docs <-
+- **Base URL:** [http://localhost:3000](http://localhost:3000)
+- **Swagger UI:** [http://localhost:3000/api-docs](http://localhost:3000/api-docs)  
+  ↳ *Swagger is generated using JSDoc comments and `swagger-jsdoc`*
 
-Swagger is generated using JSDoc comments + swagger-jsdoc.
+---
 
-Database is located at: prisma/dev.db and is auto-created by Prisma.
+## 🗂️ Database & Schema
 
-The SQL migration is stored in:
-prisma/migrations/<timestamp>_init/migration.sql
+- **Database location:** `prisma/dev.db` (auto-created by Prisma)
+- **Schema definition:** `prisma/schema.prisma`
+- **Migration script:**  
+  `prisma/migrations/<timestamp>_init/migration.sql`
+- **Seed data script:** `prisma/seed.ts`  
+  ↳ Run with:
+  ```bash
+  npm run seed
+````
 
-The schema definition is in:
-prisma/schema.prisma
+## 🧪 API Testing
 
-To populate with data use:
-prisma/seed.ts
+* HTTP tests are written using **HttpYac** instead of Postman.
+* You can run tests directly in `test.http` using the [HttpYac extension](https://marketplace.visualstudio.com/items?itemName=anweber.vscode-httpyac) for VS Code.
 
+---
+
+## 📬 Contact
+
+For any questions or feedback, feel free to contact me:
+📧 **[vasileandrei.popa@gmail.com](mailto:vasileandrei.popa@gmail.com)**
 
 
