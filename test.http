@@ -8,3 +8,42 @@ Content-Type: application/json
   "phone": "077777777",
   "email": "popa@email.com"
 }
+
+POST http://localhost:3000/api/cars
+Content-Type: application/json
+{
+  "licensePlate": "AB123CD",
+  "vin": "1HGCM82633A123456",
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 2020,
+  "engineType": "benzina",
+  "engineSize": 1.8,
+  "horsepower": 140,
+  "kilowatts": 103.0,
+  "clientId": 1
+}
+
+GET http://localhost:3000/api/cars
+
+POST http://localhost:3000/api/appointments
+Content-Type: application/json
+{
+  "carId": 1,
+  "contactMethod": "telefon",
+  "action": "Oil change and inspection",
+  "date": "2025-05-10T10:00:00.000Z",
+  "durationMins": 60
+}
+
+POST http://localhost:3000/api/serviceHistory
+Content-Type: application/json
+{
+  "appointmentId": 1,
+  "problemsReported": "Customer reported engine noise and delayed ignition",
+  "workDone": "Replaced spark plugs and performed engine diagnostic",
+  "replacedParts": "Spark plugs",
+  "durationMins": 90
+}
+
+GET http://localhost:3000/api/serviceHistory/
