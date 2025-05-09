@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.carSchema = void 0;
+exports.updateCarSchema = exports.carSchema = void 0;
 const zod_1 = require("zod");
 exports.carSchema = zod_1.z.object({
     licensePlate: zod_1.z.string().min(1),
@@ -14,3 +14,4 @@ exports.carSchema = zod_1.z.object({
     kilowatts: zod_1.z.number().positive(),
     clientId: zod_1.z.number().int().positive(),
 });
+exports.updateCarSchema = exports.carSchema.partial();

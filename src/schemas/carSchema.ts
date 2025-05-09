@@ -12,3 +12,5 @@ export const carSchema = z.object({
   kilowatts: z.number().positive(),
   clientId: z.number().int().positive(),
 });
+
+export const updateCarSchema = carSchema.partial();
